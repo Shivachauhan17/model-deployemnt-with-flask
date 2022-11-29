@@ -16,12 +16,7 @@ def predict():
     prediction=model.predict([[new_features]])
     output=round(prediction[0],2)
     return render_template('index.html',prediction_text='salary should be $ {}'.format(output))
-"""@app.route('/result',methods=['POST'])
-def result():
-    data=request.get_json(force=True)#Parses the incoming JSON request data and returns it
-    prediction=model.predict([[np.array(data['exp'])]])
-    output=prediction[0]
-    return jsonify(output)"""
+
 
 
 if __name__ == '__main__':
